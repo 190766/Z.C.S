@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ZCS - شركة التقنية المتقدمة</title>
+     
+</head>
+<body>
+
+    <header>ZCS - التقنية المتقدمة</header>
+
+    <nav>
+        <a href="#about">من نحن</a>
+        <a href="#services">الخدمات</a>
+        <a href="#contact">اتصل بنا</a>
+        <button onclick="toggleDarkMode()" style="margin-left: 15px; padding: 5px 15px; background: #ffcc00; border: none; cursor: pointer; font-weight: bold;">
+            ☀ تغيير المظهر
+        </button>
+    </nav>
+
+    <div class="hero">
+        <h1>Z.C.S مرحبا بك في </h1>
+        <p>نحو مستقبل تقني متطور</p>
+        <button onclick="scrollToContact()">تواصل معنا</button>
+    </div>
+
+    <div class="container" id="about">
+        <h2>من نحن</h2>
+        <p>نحن في ZCS نقدم أحدث الحلول التقنية لدعم أعمالك وتحقيق أعلى إنتاجية.</p>
+    </div>
+
+    <div class="container" id="services">
+        <h2>خدماتنا</h2>
+        <p>🚀 تطوير تطبيقات ويب احترافية.</p>
+        <p>🔐 حلول أمن سيبراني قوية.</p>
+        <p>🤖 ذكاء اصطناعي وتحليل بيانات.</p>
+    </div>
+
+    <div class="container" id="contact">
+        <h2>اتصل بنا</h2>
+        <p>نحن هنا لمساعدتك، تواصل معنا الآن!</p>
+        <p>تواصل معنا هنا : <a href="tel:aliprogramer96@gmail.com">Email us here </a></p>
+        <p> او هنا:  <a href="tel:tarekmojahed4@gamil.com ">Or here</a></p> 
+    </div>
+
+    <footer>
+        &copy; 2025 ZCS - جميع الحقوق محفوظة
+    </footer>
+
+    <script>
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            let button = document.querySelector("nav button");
+            if (document.body.classList.contains("dark-mode")) {
+                button.innerHTML = "🌙 الوضع الليلي";
+            } else {
+                button.innerHTML = "☀ تغيير المظهر";
+            }
+        }
+    </script>
+
+</body>
+</html>

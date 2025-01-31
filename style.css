@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+    transition: 0.5s;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+nav {
+    margin-top: 70px;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 15px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+nav a:hover {
+    border-bottom: 2px solid #ffcc00;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?technology,future') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffcc00; }
+    to { text-shadow: 0 0 20px #ffcc00, 0 0 30px #ff6600; }
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: #ffcc00;
+    color: black;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
+}
+
+.hero button:hover {
+    background: #ff9900;
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.container h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.container p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.dark-mode {
+    background: white;
+    color: black;
+}
+
+.dark-mode header {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+.dark-mode .hero {
+    background: url('https://source.unsplash.com/1600x900/?light,technology') center/cover;
+}
+
+.dark-mode .hero h1 {
+    text-shadow: 0 0 10px #333;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 16px;
+}
